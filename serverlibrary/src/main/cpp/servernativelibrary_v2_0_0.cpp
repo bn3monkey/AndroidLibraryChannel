@@ -147,17 +147,22 @@ void ServerLibrary_unregisterDataCallback(struct ServerLibraryContext* context)
     context->onDataReceived.clear();
 }
 
-void registerDeviceDisconnectionCallback(struct ServerLibraryContext* context, void (*callback)())
+void ServerLibrary_registerDeviceDisconnectionCallback(struct ServerLibraryContext* context, void (*callback)())
 {
     context->onDeviceDisconnected.add(callback);
 }
-void unregisterDeviceDisconnectionCallback(struct ServerLibraryContext* context)
+void ServerLibrary_unregisterDeviceDisconnectionCallback(struct ServerLibraryContext* context)
 {
     context->onDeviceDisconnected.clear();
 }
 
 // Socket
-int32_t registerDataSocket(struct ServerLibraryContext* context);
-void unregisterDataSocket();
+int32_t ServerLibrary_registerDataSocket(struct ServerLibraryContext* context)
+{
 
+}
+void ServerLibrary_unregisterDataSocket()
+{
+
+}
 #endif

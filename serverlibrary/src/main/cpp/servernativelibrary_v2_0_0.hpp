@@ -64,12 +64,12 @@ void ServerLibrary_registerDataCallback(struct ServerLibraryContext *context,
                                         void (*callback)(uint8_t *buf, int32_t length));
 void ServerLibrary_unregisterDataCallback(struct ServerLibraryContext *context);
 
-void registerDeviceDisconnectionCallback(struct ServerLibraryContext *context, void (*callback)());
-void unregisterDeviceDisconnectionCallback(struct ServerLibraryContext *context);
+void ServerLibrary_registerDeviceDisconnectionCallback(struct ServerLibraryContext *context, void (*callback)());
+void ServerLibrary_unregisterDeviceDisconnectionCallback(struct ServerLibraryContext *context);
 
 // Socket
-int32_t registerDataSocket(struct ServerLibraryContext *context);
-void unregisterDataSocket();
+int32_t ServerLibrary_registerDataSocket(struct ServerLibraryContext *context);
+void ServerLibrary_unregisterDataSocket();
 
 #ifdef __cplusplus
 }

@@ -30,7 +30,11 @@ public:
             ServerLibraryListener<void>& onDeviceDisconnected) :
             _device_task_runner(nullptr),
             _onDataReceived(onDataReceived),
-            _onDeviceDisconnected(onDeviceDisconnected)
+            _onDeviceDisconnected(onDeviceDisconnected),
+            _state(ServerLibrary_DeviceState::DISCONNECTED),
+            _device_id(-1),
+            _device_component_a_id(-1),
+                _device_component_b_id(-1)
     {
 
     }
@@ -72,6 +76,8 @@ private:
     uint16_t _device_id;
     int32_t _device_component_a_id;
     int32_t _device_component_b_id;
+
+    int32_t _data_state;
 
 
     void onDeviceConnected(int32_t fd);
