@@ -21,5 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "androidnativelibrarychannel"
 include(":app")
-include(":serverlibrary")
-include(":clientlibrary")
+include(":datasourcelibrary")
+include(":datadestlibrary")
